@@ -1,0 +1,12 @@
+ 1980  cd week1/
+ 1981  ls /usr/bin | grep gcc
+ 1982  ls /usr/bin | grep gcc | sort
+ 1983  ls /usr/bin | grep gcc | sort > ex1.txt
+ 1984  echo ex1.txt 
+ 1985  cat ex1.txt 
+ 1986  history
+ 1987  history | tail -9
+ 1988  history | tail -9 > ex2.txt
+
+
+# P.S. im using WSL for a while and it does not clean up its history -.-
