@@ -10,9 +10,9 @@ void isosceles(int height) {
         int spaces = (count - stars) / 2;
         for (unsigned short i = 0; i < count; i++) {
             if (i >= spaces && i < spaces + stars)
-                printf("* ");
+                printf("*");
             else
-                printf("  ");
+                printf(" ");
         }
         printf("\n");
     }
