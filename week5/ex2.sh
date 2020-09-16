@@ -14,5 +14,10 @@ do
         else
             echo "Error: $filename is already opened"
         fi
+    else
+        echo "Error: $filename does not exist"
     fi
 done
+
+# test command: ./ex2.sh file & ./ex2.sh file
+# there is enough to use this once to see the race condition. The critical region is writing to the file.
