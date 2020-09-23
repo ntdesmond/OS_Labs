@@ -1,3 +1,4 @@
+// Ex. 2: SJF
 #include <stdio.h>
 #include <stdlib.h>
 
