@@ -1,0 +1,3 @@
+A virtual address is used in virtual memory and is translated to physical address in RAM whenever the program needs
+to access this memory. A single physical address may be used in many virtual adresses, giving processes an opportunity
+to share object (e.g libraries)

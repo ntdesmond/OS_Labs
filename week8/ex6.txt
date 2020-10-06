@@ -1,0 +1,5 @@
+Since page size is 8 KiB (8192 bytes), it requires 13 bits to store an offset (2^13 == 8192)
+Virtual addresses are 16-bit for the machine, so we have 3 remaining bits for page number,
+which means we have 2^3 == 8 page entries.
+
+Answer: 8
