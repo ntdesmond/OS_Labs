@@ -1,0 +1,17 @@
+The Hit/miss ratio greatly depends on uniqueness of entries in the page queue.
+
+
+For instance, if we take a queue consisting of only a single number, repeated N times (e.g. 1 repeated 1000 times):
+
+$ for i in {1..1000}; do echo 1 >> ex1.txt; done
+
+The hit/miss ration will be equal to hit count, which is equal to N-1, since there is only 1 miss at the beginning.
+
+
+Oh the other hand, if we generate a copletely unique sequence of N pages (let's use 1000 again):
+
+$ seq 1000 > ex1.txt
+
+Then the hit/miss ratio will be equal to 0, since we get 0 hits — each page is used only once and needs to be loaded
+into the memory. 
+
