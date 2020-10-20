@@ -1,0 +1,18 @@
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ touch _ex3.txt; ls -l _ex3.txt
+-rw-r--r-- 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ chmod -x _ex3.txt; ls -l _ex3.txt
+-rw-r--r-- 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ chmod uo=rwx _ex3.txt; ls -l _ex3.txt
+-rwxr--rwx 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ chmod 660 _ex3.txt; ls -l _ex3.txt
+-rw-rw---- 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ chmod 775 _ex3.txt; ls -l _ex3.txt
+-rwxrwxr-x 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+dzmnd@DESKTOP-BBUFH3U:~/OS_Labs/week10$ chmod 777 _ex3.txt; ls -l _ex3.txt
+-rwxrwxrwx 1 dzmnd dzmnd 0 Oct 20 14:22 _ex3.txt
+
+
+# every digit in NNN form is an "rwx" bitmask in octal form for the owner, group and other users, thus
+# 660 stands for rw-rw---- (no rights to execute, reading and modifying only by the owner and the group)
+# 775 stands for rwxrwxr-x (full access for owner and the group, but can't be modified by others)
+# 777 stands for rwxrwxrwx (full access for any user)

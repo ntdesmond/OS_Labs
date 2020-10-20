@@ -1,0 +1,8 @@
+ntdesmond@mypc:~/OS_Labs/week10$ echo "file for week10 (ex. 2)" > ../week1/file.txt
+ntdesmond@mypc:~/OS_Labs/week10$ link ../week1/file.txt _ex2.txt
+ntdesmond@mypc:~/OS_Labs/week10$ ls -i _ex2.txt
+81436 _ex2.txt
+ntdesmond@mypc:~/OS_Labs/week10$ find .. -inum 81436
+../week1/file.txt
+../week10/_ex2.txt
+ntdesmond@mypc:~/OS_Labs/week10$ find .. -inum 81436 -exec rm {} \;

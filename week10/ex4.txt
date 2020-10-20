@@ -1,0 +1,2 @@
+Inode: 81968, filename: file1, 2 hard links
+Inode: 81968, filename: link1, 2 hard links
