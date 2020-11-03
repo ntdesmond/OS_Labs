@@ -1,0 +1,3 @@
+1) Experimenting with BUF_SIZE shows that the copying is faster with the bigger buffer
+2) If we enable O_SYNC, the copying process takes much more time, and the time of the process
+being blocked by I/O is not shown by the time utility
