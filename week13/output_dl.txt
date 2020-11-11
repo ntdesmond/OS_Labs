@@ -1,1 +1,3 @@
-4 processes are deadlocked
+Process 0 has got enough resources
+
+4 processes are deadlocked. Process numbers: 1 2 3 4

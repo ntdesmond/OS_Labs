@@ -1,1 +1,7 @@
+Process 0 has got enough resources
+Process 1 has got enough resources
+Process 3 has got enough resources
+Process 4 has got enough resources
+Process 2 has got enough resources
+
 No deadlock detected

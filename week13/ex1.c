@@ -21,9 +21,9 @@ void finish(int* allocated, int* available, int resource_types) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc < 5) {
+    if (argc != 4) {
         printf(
-            "Usage: %s <input filename> <resource types> <processes> <output filename>; e.g. %s in.txt 3 5 out.txt\n",
+            "Usage: %s <input filename> <resource types> <processes>; e.g. %s in.txt 3 5\n",
             argv[0], argv[0]
         );
         return 1;
@@ -74,18 +74,17 @@ int main(int argc, char* argv[]) {
         }
     } while (!deadlock && locked_count > 0);
 
-    FILE* output = fopen(argv[4], "w");
-    if (output == NULL) {
-        printf("Error opening file %s\n", argv[4]);
-        return 1;
+    if (locked_count > 0) {
+    	printf("\n%d processes are deadlocked. Process numbers:", locked_count);
+        for (int i = 0; i < processes; i++)
+            if (!finished[i])
+                printf(" %d", i);
+    	printf("\n");
     }
-    if (locked_count > 0)
-    	fprintf(output, "%d processes are deadlocked\n", locked_count);
-    else
-    	fprintf(output, "No deadlock detected\n");
-    fclose(output);
+    else {
+    	printf("\nNo deadlock detected\n");
+    }
 
-    printf("Wrote the result to %s\n", argv[4]);
     free(finished);
     free(existing);
     free(available);
